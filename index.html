@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<title>前端教育产品部</title>
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+	<!-- 头部标签 -->
+	<div class="g-header" id="headerTop">
+		<div class="g-wrapper">
+			<span class="title_left">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势!<a href="#">立即查看&gt;</a></span>
+			<span class="title_right f-fr"><a href="#"><img src="images/icon/closeTop.png" id="closeTop" alt="关闭" /></a>不再提醒</span>
+		</div>
+	</div><!-- g-header end -->
+	<!-- 中间横幅标签 -->
+	<div class="g-bannner">
+		<!-- logo及导航栏标签 -->
+		<div class="m-logo g-wrapper">
+			<img src="images/m-logo.png" alt="EDU" />
+			<a class="att_btn" id="att_btn">
+				<div id="att_Icon">
+					<img src="images/icon/attAdd.png" >
+					<span>关注</span>
+				</div>		
+			</a>
+			<div id="atted_Icon" class="atted_Icon">
+				<img src="images/icon/attRight.png" />
+				<p>已关注</p>
+				<span></span>
+				<a href="javascript:;" id="attClose">取消</a>
+			</div>
+			<!-- <span class="fans">粉丝 45</span> -->
+			<div class="m-nav f-fr">
+				<a href="http://open.163.com/" target="_blank"  class="navTit">网易公开课</a>
+				<a href="http://study.163.com/" target="_blank" class="navTit">云课堂</a>
+				<a href="http://www.icourse163.org/" target="_blank" class="navTit_2">中国大学MOOC</a>
+				<a href="javascript:;" target="_blank" class="navTit_3"></a>
+			</div>
+		</div><!-- m-nav end -->
+		<!-- 轮播图标签 -->
+		<div class="m-image" id="m-image">
+			<div class="list" id="list">
+				<a href="http://open.163.com/" target="_blank"><img id="listImg" src="images/banner1.jpg" alt="网易公开课" /></a>
+			</div>
+			<div class="buttons" >
+				<ul id="buttons">
+					<li index="1" class="on"></li>
+					<li index="2"></li>
+					<li index="3"></li>
+				</ul>
+			</div>
+			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>				
+		</div><!-- m-image end -->
+		<!-- 网易公开课、云课堂、MOOC介绍 -->
+		<div class="m-column g-wrapper f-clear">
+			<div class="opClass">
+				<img src="images/icon/网易公开课icon.jpg" alt="网易公开课" class="f-fl" />
+				<div class="opClass_ctn">
+					<h2>网易公开课</h2>
+					<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析,网易视频公开课频道搭建起强有力的网络视频教学平台。
+					</p>
+					<a href="http://open.163.com/" target="_blank"><span>了解更多 &gt;</span></a>
+				</div>
+			</div>
+			<div class="opClass">
+				<img src="images/icon/云课堂icon.jpg" alt="云课堂" class="f-fl"/>
+				<div class="opClass_ctn">
+					<h2>云课堂</h2>
+					<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。
+					</p>
+					<a href="http://study.163.com/" target="_blank"><span>了解更多 &gt;</span></a>
+				</div>		
+			</div>
+			<div class="opClass">
+				<img src="images/icon/中国大学MOOCicon.jpg" alt="中国大学MOOC" class="f-fl"/>
+				<div class="opClass_ctn">
+					<h2>中国大学MOOC</h2>
+					<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。
+					</p>
+					<a href="http://www.icourse163.org/" target="_blank"><span>了解更多 &gt;</span></a>
+				</div>				
+			</div>
+		</div><!-- m-column end -->
+	</div><!-- g-bannner end -->
+	<!-- 网易工作生活展示图片标签 -->
+	<div class="g-show f-clear">
+		<ul class="showImg">
+			<li><img src="images/img1.jpg" alt="运动场" /></li>
+			<li><img src="images/img2.jpg" alt="会议室" /></li>
+			<li><img src="images/img3.jpg" alt="图书馆" /></li>
+			<li><img src="images/img4.jpg" alt="讨论区" /></li>
+			<li><img src="images/img5.jpg" alt="零食区" /></li>
+		</ul>
+	</div><!-- g-show end -->
+	<!-- 课程展示区 -->
+	<div class="g-course g-wrapper f-clear">
+		<!-- tab标签 -->
+		<div class="m-tab" id="tabList">
+			<a href="javascript:;" class="active">产品设计</a>
+			<a href="javascript:;">编程语言</a>
+		</div><!-- m-tab end -->
+		<!-- 左边课程区 -->
+		<div class="m-course-l f-clear f-fl" id="course">
+		</div><!-- m-course-l f-clear fl end -->
+
+		<!-- 机构介绍及最热排行 -->
+		<div class="m-course-r f-clear f-fr">
+			<!-- 机构介绍 -->
+			<div class="introduce_sm">
+				<h1>机构介绍</h1>
+				<hr>
+				<h2>观看下面的视频来了解吧:</h2>
+				<video width="180" height="110" poster="images/play_sm.jpg"></video>
+				<img src="images/icon/playBtn_sm.png" id="playBtn" alt="播放按钮" />
+			</div>
+			<!-- 最热排行 -->
+			<div class="hot">
+				<h1>最热排行</h1>
+				<hr>
+				<ul id="hot">
+				</ul>
+			</div>
+	
+		</div><!-- m-course-r f-clear fr end -->
+		<!-- 课程列表页码 -->
+		<div class="page" id="page">
+			<div class="f-clear" id="pageNum">
+				<a href="javascript:;">&lt;</a>
+				<a href="javascript:;" class="current">1</a>
+				<a href="javascript:;">2</a>
+				<a href="javascript:;">3</a>
+				<a href="javascript:;">4</a>
+				<a href="javascript:;">5</a>
+				<a href="javascript:;">6</a>
+				<a href="javascript:;">7</a>
+				<a href="javascript:;">8</a>
+				<a href="javascript:;" class="direction">&gt;</a>
+			</div>
+		</div>
+	</div><!-- g-course end -->
+	<!-- 页脚 -->
+	<div class="g-footer">
+		<div class="m-footer g-wrapper">
+			<div class="f-logo f-fl">
+				<img src="images/footerLogo.png" alt="EDU" />
+				<p>©2014 icourse163.org 浙ICP备08114786号-1</p>
+				<p>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+			</div>
+			<div class="f-link f-link-1 f-fl">
+				<p>友情链接:</p>
+				<a href="http://open.163.com/" target="_blank">网易公开课</a>
+				<a href="http://study.163.com/" target="_blank">网易云课堂</a>
+				<a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
+			</div>
+			<div class="f-link f-link-2 f-fl">
+				<p>我们:</p>
+				<a href="javascript:;" target="_blank">关于</a>
+				<a href="javascript:;" target="_blank">联系</a>
+				<a href="javascript:;" target="_blank">关注<img src="images/icon/weibo.png" alt="weibo" />
+				</a>
+			</div>
+			<div class="f-link f-link-3 f-fl">
+				<p>更多:</p>
+				<a href="javascript:;" target="_blank">常见问题</a>
+				<a href="javascript:;" target="_blank">意见反馈</a>
+			</div>
+		</div>
+	</div><!-- g-footer end -->
+	<!-- 遮罩层标签 -->
+	<div id="mask"></div>
+	<!-- 登录弹出框标签 -->
+	<div class="m-login" id="login">
+		<h1>登录网易云课堂</h1>
+		<button id="closeLog" class="closePlay"></button>
+		<input type="text" class="user" placeholder="账号">
+		<input type="password" class="paw" placeholder="密码">
+		<button class="logBtn" id="logBtn">登录</button>
+	</div>
+	<!-- 视频弹出框标签 -->
+	<div class="m-introduce_big" id="introduce_big">
+		<h1>请观看下面的视频</h1>
+		<button id="closePlay" class="closePlay"></button>
+		<!-- <video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width=891 height=595 poster="images/play_big.png" id="videoBtn" controls autobuffer>
+		</video> -->
+	</div>
+	<script type="text/javascript" src="js/cookie.js"></script>
+	<script type="text/javascript" src="js/move.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/scroImag.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+</body>
+</html>
