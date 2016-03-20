@@ -20,7 +20,6 @@
 
 /* 顶栏样式 */
 .g-header{
-	width:100%;
 	height:36px;
 	background-color:#F3F3F3;
 	font:12px "Microsoft YaHei";
@@ -45,25 +44,24 @@
 
 /* 横幅样式logo样式 */
 .g-bannner{
-	width:100%;
 	height:850px;
 	background-color:#fff;
 }
 .m-logo{
 	height:58px;
-	margin-top:31px;
+	padding-top:31px;
 	font:12px/17px "SinSun";
 }
 .m-logo .att_btn{
 	width:54px;
-	height:12px;
+	height:20px;
+	line-height: 20px;
 	display:inline-block;
 	margin-left:30px;
 	cursor:pointer;
 	background-color:#21A557;
 	border-radius:4px;
 	vertical-align:top;
-	padding:3px 0 5px;
 }
 .m-logo .att_btn:hover{
 	background-color:#2FB555;
@@ -138,19 +136,17 @@
 
 /* 横幅轮播图样式 */
 .m-image{
-	width:100%;
 	height:460px;
 	position:relative;
 }
 .m-image .list{
-	width:100%;
 	height:100%;
 	position:absolute;
 	overflow:hidden;
 }
 .m-image .list img{
 	width:100%;
-	height:100%;
+	height:460px;
 }
 .m-image .buttons{
 	position:absolute;
@@ -176,13 +172,10 @@
 }
 .m-image .arrow{
 	position:absolute;
-	z-index:2;
+	z-index:100;
 	width:60px;
-	height:60px;
-	line-height:60px;
 	text-align:center;
 	font-size:60px;
-	font-weight:bold;
 	cursor: pointer;
 	color:#fff;
 	top:200px;
@@ -246,7 +239,10 @@
 /* 课程展示区 */
 .g-course{
 	padding-top:80px;
-	background-color:#f8f8f8;
+}
+.g-course .g-course-l{
+	float: left;
+	margin-right: 245px;
 }
 .g-course .m-tab a{
 	display:inline-block;
@@ -255,7 +251,7 @@
 	line-height:40px;
 	text-align:center;
 	box-shadow:1px 2px 1px 1px #ECECEC;
-	font:20px/28px "Microsoft YaHei"; 
+	font:20px/28px "Microsoft YaHei";
 	color:#666;
 	padding-top:10px;
 }
@@ -264,36 +260,30 @@
 	box-shadow:1px 2px 1px 1px #B3CDB1;
 	color:#fff;
 }
-.g-course .m-course-l{
-	margin:28px 245px 0 -18px;
-	width:100%;
-	margin-right:-245px;
+.g-course .m-course{
+	margin: 30px 0 0 -20px;
 }
 .g-course .cou-list{
-	width:224px;
+	width:223px;
 	font:12px/17px "Microsoft YaHei";
-	margin-left:18px;
 	box-shadow:0 1px 1px 1px #ECECEC;
-	border:1px solid #ECEBEB;
+	margin: 0 0 20px 20px;
 	float:left;
-	padding:1px;
 	position:relative;
-}
-.g-course .cou-list:hover{
-	box-shadow:0 1px 1px 2px #ccc;
+	padding:1px;
+	background-color: #fff;
 }
 .g-course .cou-list:hover a h1{
 	color:#39a030;
 }
-.g-course .cou-list:nth-child(n+5){/*从第5个li元素开始外边距为18px;*/
-	margin-top:18px;
-} 
+
 .g-course .cou-list a{
+	width: 100%;
 	display:inline-block;
 }
 .g-course .cou-list a img{
+	width:100%;
 	height:122px;
-	width:218px;
 }
 .g-course .cou-list a h1{
 	width:218px;
@@ -332,32 +322,32 @@
 /* 课程列表浮层弹窗样式 */
 .g-course .cou-f{
 	width:490px;
-	height:auto;
+	height:252px;
 	z-index:1000;
 	position:absolute;
 	box-shadow:inset 0 0 1px 1px #CAC9CA;
-	top:-11px;
-	left:-11px;
+	top:-12px;
+	left:-12px;
 	padding:11px 0 0 11px;
 	box-sizing:border-box;
-	overflow:hidden;
+	border: 1px solid #ccc;
 	background-color:#fff;
 }
 .g-course .cou-f div{
 	margin-left:240px;
-	height:155px;
+	width:230px;
+	height:150px;
 	cursor:pointer;
 	background-color:#fff;
 	text-overflow:ellipsis;
 	overflow:hidden;
 	white-space:nowrap;
-	width:230px;
 }
 .g-course .cou-f div img{
 	position:absolute;
 	left:12px;
 	top:12px;
-	width:218px;
+	width:223px;
 }
 .g-course .cou-f div h1{
 	font:15px/20px "Microsoft YaHei";
@@ -387,16 +377,19 @@
 	font:14px/20px "Microsoft YaHei";
 	color:#656565;
 	background-color:#f8f8f8;
-	padding:42px 10px 24px 10px;
+	padding:10px;
 	margin-left:-10px;
+	height: 60px;
+	text-indent: 2em;
+	overflow: auto;
 }
 /* 课程页码样式 */
 .g-course .page{
 	float:right;
-	margin:29px 240px 120px 0;
+	margin:20px 0 80px;
 }
 .g-course .page .direction{
-	background-color:#399F2F;
+	background-color:#9DD7B1;
 	padding:3px 5px;
 	color:#fff;
 }
@@ -413,94 +406,95 @@
 	font:14px/20px "Microsoft YaHei";
 	padding:3px 5px;
 	float:left;
-	margin:0 2px;
+	width: 17px;
+	text-align: center;
 }
 .g-course .page a:hover{
-	background-color:#399F2F;
-	color:#656565;
+	background-color:#9DD7B1;
+	color:#fff;
 }
 
 /* 机构介绍及最热排行 */
-.m-course-r{
+.g-course-r{
 	width:223px;
-	margin-top:-50px;
 	position:relative;
 	float:right;
+	margin-left: -223px;
 }
-.m-course-r .introduce_sm{
+.g-course-r .m-introduce{
 	width:100%;
 	height:229px;
 	border:1px solid #ECEBEB;
 	box-shadow:0 1px 2px 1px #DCDCDC;
 	background-color:#fff;
 }
-.m-course-r h1{
+.g-course-r h1{
 	font:16px/23px "Microsoft YaHei";
 	padding:17px 0 15px 18px;
 	color:#333;
 }
-.m-course-r hr{
+.g-course-r hr{
 	background-color:#ddd;
 }
-.m-course-r .introduce_sm h2{
+.g-course-r .m-introduce h2{
 	font:14px/21px "Microsoft YaHei";
 	color:#656565;
 	margin:16px 0 5px 20px;
 }
-.m-course-r .introduce_sm video{
+.g-course-r .m-introduce video{
 	margin:0 auto;
 	display:block;
 	background-color:#EDEDED;
 	position:relative;
 }
-.m-course-r .introduce_sm img{
+.g-course-r .m-introduce img{
 	position:absolute;
 	top:130px;
 	left:90px;
 	cursor:pointer;
 }
-.m-course-r .hot{
+.g-course-r .m-hotTop{
 	margin-top:20px;
 	background-color:#fff;
 	padding-bottom:20px;
 	border:1px solid #ccc;
 }
-.m-course-r .hot ul{
+.g-course-r .m-hotTop ul{
 	position:relative;
 	height:720px;
 }
-.m-course-r .hot li{
+.g-course-r .m-hotTop li{
 	margin:20px 0 0 20px;
 	width:185px;
 }
-.m-course-r .hot li:hover{
+.g-course-r .m-hotTop li:hover{
 	box-shadow:0 1px 1px 1px #ccc;
 }
-.m-course-r .hot a>img{
+.g-course-r .m-hotTop a>img{
 	width:50px;
 	height:50px;
 	float:left;
 	margin-right:10px;
 }
-.m-course-r .hot li p{
+.g-course-r .m-hotTop li p{
 	font:14px/21px "Microsoft YaHei";
 	color:#333;
 	text-overflow:ellipsis;
 	overflow:hidden;
 	white-space:nowrap;
 }
-.m-course-r .hot .pepIcon{
+.g-course-r .m-hotTop .pepIcon{
 	display:inline-block;
 	margin-top:5px;
 }
-.m-course-r .hot .pepIcon img{
+.g-course-r .m-hotTop .pepIcon img{
 	width:8px;
 	height:10px;
 	float:left;
 	margin-right:6px;
 	margin-top:4px;
 }
-.m-course-r .hot .pepIcon span{
+.g-course-r .m-hotTop .pepIcon span{
 	color:#9C999C;
 	font:10px "Microsoft YaHei";
 }
@@ -642,15 +636,34 @@
 /* 响应式布局设置 */
 /* 小屏布局(clientWidth < 1205) */
 @media screen and (max-width:1205px){
-	.g-wrapper{width:100%;}
-	.g-course .cou-list:nth-child(n+4){/*小屏时从第4个li元素开始外边距为18px;*/
-		margin-top:18px;
+	.g-wrapper{
+		width:960px;
 	}
-	.g-course .m-course-l{
-		width:980px;
+	/* 顶栏样式和横幅轮播图样式 */
+	.g-header,.m-image{
+		width: 100%;
 	}
-}
-/* 大屏布局(clientWidth >=1205) */
-@media screen and (min-width:1205px){
-	.g-wrapper{width:1205px;}
+	/* 顶栏样式和横幅样式logo样式 */
+	.g-bannner{
+		height: 800px;
+	}
+	/* 网易公开课、云课堂、MOOC介绍样式 */
+	.m-column{
+		margin-top: 30px;
+	}
+	/* 课程展示区 */
+	.g-course{
+		padding-top: 40px;
+	}
+	/* 课程页码样式 */
+	.g-course .page{
+		margin:10px 0 50px;
+	}
+	/* 页脚样式 */
+	.g-footer .m-footer{
+		margin: 40px 0 0 20px;
+	}
+	.g-footer .f-link-1{
+		margin-left: 100px;
+	}
 }
