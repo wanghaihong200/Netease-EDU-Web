@@ -141,7 +141,7 @@ var MainUtil = {
    * 课程列表连接函数
    */
   getData: function(num,size,typeNum) {
-  	return "pageNo="+num+"&psize="+size+"&type="+typeNum+"";
+    return "pageNo="+num+"&psize="+size+"&type="+typeNum+"";
   },
   /* Ajax封装函数 */
   ajax: function(method,url,data,success) {
@@ -216,8 +216,8 @@ var MainPublic = {
    * @param  {Object} objMovie    视频弹出框对象
    */
   popUpBox: function(objMask,oIntBig) {
-    objMask.className = 'm-mask';  					    						// 添加遮罩层
-    oIntBig.style.display = "block"; 		  						  		// 将隐藏的弹出框显示出来
+    objMask.className = 'm-mask';                            // 添加遮罩层
+    oIntBig.style.display = "block";                         // 将隐藏的弹出框显示出来
     // 获取可视区域宽度和高度及页面滚动高度
     var oClientWidth = MainUtil.getViewport().clientWidth,
         oClientHeight = MainUtil.getViewport().clientHeight,
@@ -318,7 +318,7 @@ var MainMovie = {
   startMove: function(obj,json,sp,fnEnd) {
     clearInterval(obj.timer);                    // 每次运动前清掉对象中的原有的定时器，防止运动叠加
     obj.timer = setInterval(function(){
-      var bStop = true;				                   // 标记位，判断运动是否完成
+      var bStop = true;                          // 标记位，判断运动是否完成
       for(var name in json) {                    // 遍历传输过来的json值
         var iTarget = json[name];
         if(name == 'opacity'){                   // 将透明度与其他属性值分开处理
@@ -329,7 +329,7 @@ var MainMovie = {
         var speed = (iTarget - cur) / sp;         // 运动速度
         // 如果速度大于0,则speed向上取整，否则向下取整，避免运动无法完成
         speed = speed > 0 ? Math.ceil(speed):Math.floor(speed);
-        if(name == 'opacity'){									  // 对opacity进行另外处理，进行兼容性处理
+        if(name == 'opacity'){                    // 对opacity进行另外处理，进行兼容性处理
           obj.style.filter = 'alpha(opacity:'+(cur+speed)+')';
           obj.style.opacity = (cur+speed) / 100;
         }else{
