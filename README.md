@@ -1,5 +1,5 @@
 # Netease-EDU-Web
-## 网易微专业大作业  <a href="http://loogeek.github.io/Netease-EDU-Web" target="_blank">Web Demo</a>  
+##<a href="http://loogeek.github.io/Netease-EDU-Web" target="\_blank"网易教育产品部页面代码demo</a> 
 - 固定用户帐号:studyOnline
 - 固定用户密码:study.163.com
 
