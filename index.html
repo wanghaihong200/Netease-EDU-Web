@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
-	<title>前端教育产品部</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+	<title>网易教育产品部</title>
 	<link rel="stylesheet" type="text/css" href="style/reset.css">
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
@@ -24,7 +24,7 @@
 				<div id="att_Icon">
 					<img src="images/icon/attAdd.png" >
 					<span>关注</span>
-				</div>		
+				</div>
 			</a>
 			<div id="atted_Icon" class="atted_Icon">
 				<img src="images/icon/attRight.png" />
@@ -32,7 +32,6 @@
 				<span></span>
 				<a href="javascript:;" id="attClose">取消</a>
 			</div>
-			<!-- <span class="fans">粉丝 45</span> -->
 			<div class="m-nav f-fr">
 				<a href="http://open.163.com/" target="_blank"  class="navTit">网易公开课</a>
 				<a href="http://study.163.com/" target="_blank" class="navTit">云课堂</a>
@@ -42,8 +41,10 @@
 		</div><!-- m-nav end -->
 		<!-- 轮播图标签 -->
 		<div class="m-image" id="m-image">
-			<div class="list" id="list">
-				<a href="http://open.163.com/" target="_blank"><img id="listImg" src="images/banner1.jpg" alt="网易公开课" /></a>
+			<div class="list" id="imgList">
+				<a href="http://open.163.com/" target="_blank"><img src="images/banner1.jpg" alt="网易公开课" /></a>
+				<a href="http://study.163.com/" target="_blank"><img src="images/banner2.jpg" alt="云课堂" /></a>
+				<a href="http://www.icourse163.org/" target="_blank"><img src="images/banner3.jpg" alt="中国大学MOOC" /></a>
 			</div>
 			<div class="buttons" >
 				<ul id="buttons">
@@ -53,7 +54,7 @@
 				</ul>
 			</div>
 			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
-			<a href="javascript:;" id="next" class="arrow">&gt;</a>				
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>
 		</div><!-- m-image end -->
 		<!-- 网易公开课、云课堂、MOOC介绍 -->
 		<div class="m-column g-wrapper f-clear">
@@ -73,7 +74,7 @@
 					<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。
 					</p>
 					<a href="http://study.163.com/" target="_blank"><span>了解更多 &gt;</span></a>
-				</div>		
+				</div>
 			</div>
 			<div class="opClass">
 				<img src="images/icon/中国大学MOOCicon.jpg" alt="中国大学MOOC" class="f-fl"/>
@@ -82,7 +83,7 @@
 					<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。
 					</p>
 					<a href="http://www.icourse163.org/" target="_blank"><span>了解更多 &gt;</span></a>
-				</div>				
+				</div>
 			</div>
 		</div><!-- m-column end -->
 	</div><!-- g-bannner end -->
@@ -98,19 +99,25 @@
 	</div><!-- g-show end -->
 	<!-- 课程展示区 -->
 	<div class="g-course g-wrapper f-clear">
-		<!-- tab标签 -->
-		<div class="m-tab" id="tabList">
-			<a href="javascript:;" class="active">产品设计</a>
-			<a href="javascript:;">编程语言</a>
-		</div><!-- m-tab end -->
-		<!-- 左边课程区 -->
-		<div class="m-course-l f-clear f-fl" id="course">
-		</div><!-- m-course-l f-clear fl end -->
-
+		<!-- 左边tab标签及课程区 -->
+		<div class="g-course-l">
+			<!-- tab标签 -->
+			<div class="m-tab" id="tabList">
+				<a href="javascript:;" class="active">产品设计</a>
+				<a href="javascript:;">编程语言</a>
+			</div><!-- m-tab end -->
+			<!-- 左边课程区 -->
+			<div class="m-course f-clear f-fl" id="course">
+			</div><!-- m-course f-clear fl end -->
+			<!-- 课程列表页码 -->
+			<div class="page" id="page">
+				<div id="pageNum"></div>
+			</div>
+		</div>
 		<!-- 机构介绍及最热排行 -->
-		<div class="m-course-r f-clear f-fr">
+		<div class="g-course-r f-clear">
 			<!-- 机构介绍 -->
-			<div class="introduce_sm">
+			<div class="m-introduce">
 				<h1>机构介绍</h1>
 				<hr>
 				<h2>观看下面的视频来了解吧:</h2>
@@ -118,29 +125,13 @@
 				<img src="images/icon/playBtn_sm.png" id="playBtn" alt="播放按钮" />
 			</div>
 			<!-- 最热排行 -->
-			<div class="hot">
+			<div class="m-hotTop">
 				<h1>最热排行</h1>
 				<hr>
 				<ul id="hot">
 				</ul>
 			</div>
-	
-		</div><!-- m-course-r f-clear fr end -->
-		<!-- 课程列表页码 -->
-		<div class="page" id="page">
-			<div class="f-clear" id="pageNum">
-				<a href="javascript:;">&lt;</a>
-				<a href="javascript:;" class="current">1</a>
-				<a href="javascript:;">2</a>
-				<a href="javascript:;">3</a>
-				<a href="javascript:;">4</a>
-				<a href="javascript:;">5</a>
-				<a href="javascript:;">6</a>
-				<a href="javascript:;">7</a>
-				<a href="javascript:;">8</a>
-				<a href="javascript:;" class="direction">&gt;</a>
-			</div>
-		</div>
+		</div><!-- g-course-r f-clear fr end -->
 	</div><!-- g-course end -->
 	<!-- 页脚 -->
 	<div class="g-footer">
@@ -184,14 +175,11 @@
 	<div class="m-introduce_big" id="introduce_big">
 		<h1>请观看下面的视频</h1>
 		<button id="closePlay" class="closePlay"></button>
-		<!-- <video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width=891 height=595 poster="images/play_big.png" id="videoBtn" controls autobuffer>
-		</video> -->
+		<video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width='890' height='595' poster="images/play_big.png" id="videoBtn" controls="true">
+		</video>
 	</div>
-	<script type="text/javascript" src="js/cookie.js"></script>
-	<script type="text/javascript" src="js/move.js"></script>
-	<script type="text/javascript" src="js/ajax.js"></script>
-	<script type="text/javascript" src="js/scroImag.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/md5.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
