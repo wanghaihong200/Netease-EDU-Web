@@ -257,7 +257,11 @@
 			var event = MainUtil.getEvent(event),						// 获取事件对象
 					target = MainUtil.getTarget(event);					// 获取当前点击的元素对象
 
-			if(target.tagName.toLowerCase() === 'a') {
+			// 如果重复点击相同Tab则不执行后面操作
+			if(target.className === 'active') {
+				return;
+			}
+			if(target.tagName === 'A') {
 				// 去掉tab标签的active样式
 				MainUtil.getElementsByClassName(this,'active')[0].className = '';
 				target.className = 'active';									// 给当前点击标签添加active类名
