@@ -143,7 +143,13 @@ var MainUtil = {
   getData: function(num,size,typeNum) {
     return "pageNo="+num+"&psize="+size+"&type="+typeNum+"";
   },
-  /* Ajax封装函数 */
+  /**
+   * Ajax请求函数
+   * @param  {String}   method  请求方法
+   * @param  {String}   url     请求URL地址
+   * @param  {String}   data    请求数据
+   * @param  {Function} success 回调函数
+   */
   ajax: function(method,url,data,success) {
     var xhr = null;
     if (window.XMLHttpRequest) {

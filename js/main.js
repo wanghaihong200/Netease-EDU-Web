@@ -216,7 +216,7 @@
     // 关闭视频弹出框
     MainUtil.addEvent(oClosePlay,'click',function(){
       if(oVideoBtn.pause){
-        oVideoBtn.pause();                             // 关闭视频后视频暂停播放
+        oVideoBtn.pause();                           // 关闭视频后视频暂停播放
       }
       oIntBig.style.display = "none";                // 隐藏视频播放弹出框
       oMask.className = '';                          // 隐藏遮罩层
