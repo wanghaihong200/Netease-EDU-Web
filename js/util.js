@@ -152,13 +152,8 @@ var MainUtil = {
    */
   ajax: function(method,url,data,success) {
     var xhr = null;
-    if (window.XMLHttpRequest) {
-        xhr = new XMLHttpRequest();
-    //兼容ie6
-    }else {
 
-        xhr = new ActiveXObject('Microsoft.XMLHTTP');
-    }
+    xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
         if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
