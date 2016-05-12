@@ -13,7 +13,7 @@ var MainUtil = {
   * @param {[String]} type         [事件类型]
   * @param {[Function]} handler    [事件处理函数]
   * element.addEventListener       兼容IE9+等主流游览器
-  * element.attachEvent            兼容IE6-10
+  * element.attachEvent            兼容IE6-8
   */
   addEvent: function(element, type, handler) {
    if (element.addEventListener) {
@@ -54,7 +54,7 @@ var MainUtil = {
   },
   /**
    * 获取元素类名函数
-   * 支持:IE 9+、Firefox 3+、Safari 3.1+、Chrome 和 Opera 9.5+
+   * 支持:IE 6+、Firefox 3+、Safari 3.1+、Chrome 和 Opera 9.5+
    */
   getElementsByClassName: function(element,names) {
     if (element.getElementsByClassName) {

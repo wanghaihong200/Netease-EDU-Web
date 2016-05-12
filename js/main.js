@@ -4,8 +4,8 @@
      顶部通知栏区域模块
    */
   var indexHeader_module = (function() {
-    var  oHeaderTop = $('headerTop'),                    // 获取顶部通知栏的容器对象
-        oCloseTop = $('closeTop');                       // 获取顶部通知栏不再提醒关闭按钮对象
+    var oHeaderTop = $('headerTop'),                    // 获取顶部通知栏的容器对象
+        oCloseTop = $('closeTop');                      // 获取顶部通知栏不再提醒关闭按钮对象
 
     // 刷新页面后顶部通知栏通过cookie值来判断是否需要隐藏该通知栏
     oHeaderTop.style.display = MainCookie.getCookie("headerTop");
@@ -101,7 +101,6 @@
      * @param  {Number} repData 如果返回1则设置关注成功的cookie(followSuc)
      */
     function followSuc(repData) {
-      console.log(repData);
       if(repData == 1){
         MainCookie.setCookie("followSuc",1,14);             //设置关注cookie，有效期为14天
       }
@@ -223,8 +222,8 @@
     });
     // 机构介绍弹出视频点击video可以切换播放或暂停播放
     // 为了解决firefox上点击视频无法播放bug，通过游览器类型检测解决
-    if(navigator.userAgent.indexOf("Firefox")>0){
-    // 让非Firefox游览器执行下面语句
+    if(navigator.userAgent.indexOf("Firefox") > 0){
+      return;
     }else{
       // 若当前视频暂停，则点击后继续播放，否则停止播放
       MainUtil.addEvent(oVideoBtn,'click',function(){
@@ -322,7 +321,7 @@
      */
     function couListAjax(repData) {
       var data = JSON.parse(repData).list,            // 将JSON对象转换为对象
-          oCourse = $('course'),                      //获取课程列表容器对象
+          oCourse = $('course'),                      // 获取课程列表容器对象
           couLen = MainUtil.getElementsByClassName(oCourse,'cou-list').length,// 获取课程列表数量
           dataLen = data.length;                      // 切换课程后返回课程数量
 
@@ -378,7 +377,7 @@
       for(var i = 0; i < couLen; i++) {
         aCourseList[i].index = i;              //将每个图层的序号保存到每个图层定义的新index属性中
         //鼠标移入事件，在该课程列表后新建一个div浮动图层
-        aCourseList[i].onmouseenter=function(event){
+        aCourseList[i].onmouseenter = function(event){
           // 创建课程浮层显示详细信息
           var oDivF = document.createElement('div');
           oDivF.className = "cou-f";                    //给新建浮动层添加cou-f样式
@@ -487,14 +486,13 @@
           bChange = true,                             // 值为true时课程向上滚动，否则向下滚动
           aLi = oHot.getElementsByTagName('li')       // 获取最热排行ul列表下全部li标签
       for(var i = 0; i < aLi.length; i++) {
-        aLi[i].style.position = "absolute";           // 给每个课程添加绝对定位来进行滚动
         aLi[i].style.top = 70 * i + "px";             // 为前10门课程定好位置，每门课程高度为70
         if(i > 9){                                    // 后10门课程位置和第10们课程相同
           aLi[i].style.top = 630 + "px";
           MainMovie.startMove(aLi[i],{opacity:0},2);  // 通过MainMovie.startMove函数设置透明度为0
         }
       }
-      timerHot = setInterval(function(){                // 开启定时器，每5s执行一次
+      timerHot = setInterval(function(){                // 开启定时器，每3s执行一次
         if(bChange){                                    // bChange为true时课程向上滚动
           MainMovie.startMove(aLi[index],{opacity:0},2);// 每次运动先让最顶上的课程透明度为0
           for(var i = index+1; i < 10+index; i++) {     // 剩余的9门课程分别移动到上一门课程高度
@@ -503,7 +501,7 @@
           // 每次隐藏的第一门课透明度变为100显示在第10个位置
           MainMovie.startMove(aLi[index+10],{opacity:100},2);
           index++;                                      // 指向第二门课程
-          if(index == 10){                          // 判断如果10门课程移动完了开始做相反方向移动
+          if(index == 10){                              // 判断如果10门课程移动完了开始做相反方向移动
             bChange = false;                            // 标志位取反向下移动
             index = 19;                                 // 指向最后一门课程
           }
